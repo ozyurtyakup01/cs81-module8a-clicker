@@ -12,17 +12,20 @@
 
     <div id="counter">Cookies: 0</div>
     <div id="message">Start clicking for cookies</div>
+    
     <script>
         let counter = 0;
         const button = document.getElementById("cookieButton");
         const counterDisplay = document.getElementById("counter");
         const messageDisplay = document.getElementById("message");
         
+        button.addEventListener("click", clicked);
+
         function clicked()
         {
             counter++;
             document.getElementById("counter").textContent = `Cookies: ${counter}`;
-            
+
             let message = document.getElementById("message");
             if (counter == 10)
             {
