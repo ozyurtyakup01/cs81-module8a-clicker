@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+
+    <div>
+    <button id="cookieButton">🍪</button>
+    </div>
+
+    <div id="counter">Cookies: 0</div>
+    <div id="message">Start clicking for cookies</div>
+    <script>
+        let counter = 0;
+        const button = document.getElementById("cookieButton");
+        const counterDisplay = document.getElementById("counter");
+        const messageDisplay = document.getElementById("message");
+        
+        function clicked()
+        {
+            counter++;
+            document.getElementById("counter").textContent = `Cookies: ${counter}`;
+            
+            let message = document.getElementById("message");
+            if (counter == 10)
+            {
+                message.textContent = "You are just getting started";
+            }
+            else if(counter == 25)
+            {
+                message.textContent = "Wow, that is a lot of cookies";
+            }
+            else if(counter == 50)
+            {
+                message.textContent = "Are you still clicking?";
+            }
+            else if(counter >= 100)
+            {
+                message.textContent = "You win! Maybe take a break";
+            }
+        }
+    </script>
+</body>
+</html>
