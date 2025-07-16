@@ -3,16 +3,35 @@
 <head>
     <meta charset="UTF-8" />
     <title>title</title>
+
+    <style>
+        body 
+        {
+            background-image: url("1.png");
+            background-color: rgba(245, 65, 185, 0.873);
+            background-repeat: repeat;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        .div2,.div3
+        {
+            margin: 20px;
+            font-size: 24px;
+            background-color: rgba(128, 114, 114, 0.873);;
+        }
+    </style>
 </head>
 <body>
 
-    <div>
+    <div class="div2" id="counter">Cookies: 0</div>
+    <div class="div3" id="message">Start clicking for cookies</div>
+
+    <div class="div1">
     <button id="cookieButton">🍪</button>
     </div>
 
-    <div id="counter">Cookies: 0</div>
-    <div id="message">Start clicking for cookies</div>
-    
     <script>
         let counter = 0;
         const button = document.getElementById("cookieButton");
@@ -30,18 +49,22 @@
             if (counter == 10)
             {
                 message.textContent = "You are just getting started";
+                document.body.style.backgroundColor ="rgba(100, 149, 237, 0.873)";
             }
             else if(counter == 25)
             {
                 message.textContent = "Wow, that is a lot of cookies";
+                document.body.style.backgroundColor = "rgba(148, 0, 211, 0.873)";
             }
             else if(counter == 50)
             {
                 message.textContent = "Are you still clicking?";
+                document.body.style.backgroundColor = "rgba(173, 255, 47, 0.873)";
             }
             else if(counter >= 100)
             {
                 message.textContent = "You win! Maybe take a break";
+                document.body.style.backgroundColor ="rgba(255, 218, 185, 0.873)";
             }
         }
     </script>
